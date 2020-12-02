@@ -3,8 +3,8 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const app = express();
 
-const publishable_key = "abc";
-const secret_key = "abc";
+const publishable_key = process.env.PUBLISHABLE_KEY;
+const secret_key = process.env.SECRET_KEY;
 
 const stripe =  require('stripe')(secret_key);
 
